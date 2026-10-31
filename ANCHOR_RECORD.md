@@ -3,7 +3,7 @@
 **Project:** `prospective_inflation_pipeline_priority2`  
 **Git Release Tag:** `priority2-accepted-prototype-20261031-v2`  
 **Remote Tag URL:** [https://github.com/Dips7/nepal-macro-inflation-research/releases/tag/priority2-accepted-prototype-20261031-v2](https://github.com/Dips7/nepal-macro-inflation-research/releases/tag/priority2-accepted-prototype-20261031-v2)  
-**External Anchoring Posture:** **`EXTERNAL PENDING — OTS SUBMITTED / REMOTE TAG PUBLISHED`**  
+**External Anchoring Posture:** **`EXTERNAL ANCHORED — BITCOIN BLOCK HEADER ATTESTED (BLOCK 973981)`**  
 **Pipeline Classification:** **`PROTOTYPE_ONLY_NOT_READY_FOR_LIVE_ISSUANCE`**  
 **Record Generation Timestamp:** `2026-10-31T13:40:00Z`  
 **Release Version:** `v2` (Self-Contained Release; supersedes `v1` while preserving full `v1` history)
@@ -64,13 +64,17 @@
 - **`tag_object_sha.txt` (`2561369f…`):**
   - Target SHA-256: `6101749d7861ec2399f652b1fe36bd15d8c4dbadb2caad458eab8e14cbb60dba`
   - Proof File: `tag_object_sha.txt.ots`
-  - Status: Submitted & Pending Bitcoin Block Confirmation across 3 calendar pools (`btc.calendar.catallaxy.com`, `bob.btc.calendar.opentimestamps.org`, `finney.calendar.eternitywall.com`).
+  - Status: **Confirmed in Bitcoin Blockchain (Block Header Attestation)**
+  - Bitcoin Block: `973981`
+  - Bitcoin Transaction ID: `e665562aa100ede31cfa878abbaccada3db33bec364ec372f7a3493b5e5ba0fd`
+  - Merkle Root: `62aaaeee1e94ff1d6cc1f4874a788a204498e3f1899a8ee31c2b119c2e7c7c28`
+  - Attestation: `BitcoinBlockHeaderAttestation(973981)` via `bob.btc.calendar.opentimestamps.org`
 - **`commit_sha.txt` (`da25fa6d…`):**
-  - Proof File: `commit_sha.txt.ots` (Pending confirmation)
+  - Proof File: `commit_sha.txt.ots` (Confirmed in Bitcoin Block 973981)
 - **`ARCHIVE_MANIFEST.json` (`6b51983d…`):**
-  - Proof File: `ARCHIVE_MANIFEST.json.ots` (Pending confirmation)
+  - Proof File: `ARCHIVE_MANIFEST.json.ots` (Confirmed in Bitcoin Block 973981)
 - **`DATA_MANIFEST.json` (`bda92ba3…`):**
-  - Proof File: `DATA_MANIFEST.json.ots` (Pending confirmation)
+  - Proof File: `DATA_MANIFEST.json.ots` (Confirmed in Bitcoin Block 973981)
 
 ### Historical Release (v1) Preserved Proofs:
 - **`tag_object_sha_v1.txt` (`c50bde96…`):** Proof `tag_object_sha_v1.txt.ots`
