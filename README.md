@@ -52,12 +52,13 @@
 
 ---
 
-## 4. Verification Commands for Third Parties
+## 4. Verification & Access Model
 
-Any independent party can verify this release from scratch without access to the author's local workstation:
+- **Repository Access:** The primary research repository `Dips7/nepal-macro-inflation-research` is private. Authenticated auditors can clone the tag directly. The public anchor files, digests, and OpenTimestamps proofs are hosted publicly in this repository (`Dips7/nepal-macro-anchor-priority2`).
+- **Data Dependencies:** Stages 4–6 of the master verifier dynamically validate against three historical reference datasets totaling 5.5 MB (`Revamped/dataset_v2/data/core.csv`, `Revamped/dataset_v2/results/primary_20261008/forecasts.csv`, and `Revamped/dataset_v2/data/predictors.csv`). When testing a fresh clone, these three data files must be present at their relative paths for Stages 4–6 to execute.
 
 ```bash
-# 1. Clone repository from GitHub
+# 1. Clone repository from GitHub (requires authenticated access to private repo)
 git clone https://github.com/Dips7/nepal-macro-inflation-research.git audit-clone
 cd audit-clone
 
@@ -69,12 +70,12 @@ git checkout refs/tags/priority2-accepted-prototype-20261031
 test "$(git rev-parse refs/tags/priority2-accepted-prototype-20261031)" = "c50bde96674fccc48ac666628bd37e6169079153"
 test "$(git rev-parse refs/tags/priority2-accepted-prototype-20261031^{commit})" = "68ca9c40e0e9a7c7e52011388cadbffd8962c299"
 
-# 4. Verify OpenTimestamps proof
+# 4. Verify OpenTimestamps proof against tag object SHA
 ots --version  # requires opentimestamps-client >= 0.7.2
 printf '%s\n' c50bde96674fccc48ac666628bd37e6169079153 > tag_object_sha.txt
-ots verify -d tag_object_sha.txt tag_object_sha.txt.ots
+ots verify -f tag_object_sha.txt tag_object_sha.txt.ots
 
-# 5. Run full 7-stage master verifier
+# 5. Run full 7-stage master verifier (with historical reference data present)
 cd prospective_inflation_pipeline_priority2
 python3 run_verification.py
 ```
