@@ -1,0 +1,83 @@
+{
+  "manifest_version": "1.0",
+  "project": "prospective_inflation_pipeline_priority2",
+  "description": "Authoritative self-contained dataset manifest pinning historical core series, predictor series, and primary benchmark calibration forecasts.",
+  "created_at_utc": "2026-10-31T13:15:00+00:00",
+  "total_files": 3,
+  "total_bytes": 5485730,
+  "files": {
+    "core.csv": {
+      "relative_path": "data/core.csv",
+      "sha256": "10b1b84cc75d6e5498aa9a0a38e2c89b301ecd38f8861ad3207ca9c3a4f3ce0d",
+      "byte_size": 94304,
+      "row_count": 801,
+      "columns": [
+        "date",
+        "inflation",
+        "m1",
+        "m2",
+        "m1_yoy",
+        "m2_yoy",
+        "liquidity",
+        "monetary_cross_definition",
+        "period_start",
+        "period_end",
+        "month_sin",
+        "month_cos"
+      ],
+      "source_provenance": "Nepal Rastra Bank (NRB) Monthly Current Macroeconomic and Financial Situation reports and Central Bureau of Statistics CPI releases; harmonized Gregorian-BS reference mapping.",
+      "snapshot_date": "2026-10-08",
+      "license_usage_note": "Research and non-commercial scientific evaluation of monetary and inflation surveillance models in Nepal."
+    },
+    "predictors.csv": {
+      "relative_path": "data/predictors.csv",
+      "sha256": "a1fd35156fdc764d0026469a0a3a2e6808756ed02a0ed0629b1356970ab04345",
+      "byte_size": 58127,
+      "row_count": 801,
+      "columns": [
+        "date",
+        "india_yoy",
+        "brent_yoy",
+        "fx_log_change",
+        "remittance_yoy",
+        "policy_rate",
+        "period_end",
+        "remittance_period_end"
+      ],
+      "source_provenance": "External macroeconomic indicators: RBI CPI, Brent crude futures, NRB foreign exchange rates, NRB balance of payments remittances, and NRB policy rate series.",
+      "snapshot_date": "2026-10-08",
+      "license_usage_note": "Research and non-commercial scientific evaluation of monetary and inflation surveillance models in Nepal."
+    },
+    "forecasts.csv": {
+      "relative_path": "data/forecasts.csv",
+      "sha256": "d971965b11287754b80e370ef5a5e30e9dd5da76c162a2c7b7c9f71262285c9f",
+      "byte_size": 5333299,
+      "row_count": 26280,
+      "columns": [
+        "target",
+        "scenario",
+        "model",
+        "feature_set",
+        "origin_period",
+        "issue_date",
+        "target_period",
+        "horizon",
+        "refit_date",
+        "prediction",
+        "actual",
+        "actual_availability",
+        "status",
+        "error",
+        "max_feature_availability",
+        "max_training_label_availability",
+        "mase_denominator",
+        "available_target_period",
+        "available_joint_period",
+        "evidence_scope"
+      ],
+      "source_provenance": "Empirical historical out-of-sample forecast outputs from the primary 2026-10-08 benchmark model evaluation run across Nepal macroeconomic targets.",
+      "snapshot_date": "2026-10-08",
+      "license_usage_note": "Research and non-commercial scientific evaluation of monetary and inflation surveillance models in Nepal."
+    }
+  }
+}
